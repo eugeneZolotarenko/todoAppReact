@@ -1,0 +1,98 @@
+$orange: #eb783f;
+$purple: #b800ff;
+form{
+    text-align: center;
+    padding: 80px 0 50px 0;
+    .add-text-todo{
+        border: none;
+        background: $orange;
+        background: white;
+        color: $purple;
+        font-size: 25px;
+        padding: 15px 10px;
+        width: 50%;
+        border: 1px solid $purple;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: .3s;
+        outline: none;
+    }
+    .btn-todo{
+        border: none;
+        background: $purple;
+        border: 1px solid $purple;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: white;
+        font-size: 25px;
+        padding: 15px;
+        transition: .3s;
+        outline: none;
+    }
+    &:hover .add-text-todo{
+        border: 1px solid $orange;
+        box-shadow: 0 8px 6px -6px $orange;
+        color: $orange;
+    }
+    &:hover .btn-todo{
+        background: $orange;
+        border: 1px solid $orange;
+        box-shadow: 0 8px 6px -6px $orange;
+    }
+}
+.todos-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 80px 0;
+    ul{
+        border: 1px solid $purple;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 0 5%;
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-flow: wrap;
+        transition: .3s;
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem .8rem .8rem .8rem;
+            border-bottom: 1px solid $purple;
+            transition: .3s;
+            span{
+                width: 95%;
+            }
+            button{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: none;
+                background: $purple;
+                color: white;
+                font-weight: 600;
+                outline: none;
+                transition: .3s;
+                &:hover{
+                    box-shadow: 0 8px 6px -6px $orange;
+                }
+                &:active{
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    &:hover ul{
+        border: 1px solid $orange;
+        box-shadow: 0 8px 6px -6px $orange;
+        li{
+            border-bottom: 1px solid $orange;
+            button{
+                background: $orange;
+            }
+        }
+    }
+}
